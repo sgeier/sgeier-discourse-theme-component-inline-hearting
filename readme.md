@@ -4,8 +4,8 @@ This theme component allows you to "like" text sections inside a post (not just 
 
 ## Features
 
-- Support for liking images
-- Simple validation checks and tooltips to inform
+- Like paragraphs or entire list entries or even images
+- Simple validation checks and tooltips to inform the user if a heart can be applied or not
 
 ## Installation
 
