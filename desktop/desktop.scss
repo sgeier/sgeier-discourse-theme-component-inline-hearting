@@ -1,0 +1,30 @@
+@import 'variables';
+
+$heart-color: #f36b6b;
+$heart-quote-hovered: #d75353;
+
+.heartIconHover:hover {
+    filter: brightness(1.3);
+}
+
+.heartIconWrapperWithHover {
+    display: table;
+}
+.lightbox-wrapper .heartIconWrapperWithHover {
+    display: revert;
+}
+
+
+
+// Heart icon on Video Thumbnail
+// *------------------------------------------------*
+.apollo-video-anchor  {
+    .video-thumb-wrapper {
+        .heartIcon {
+            right: 12px;
+            top: 3px;
+
+        }
+    }
+}
+

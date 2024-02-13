@@ -1,0 +1,24 @@
+allow_like_own_content:
+  default: true
+  description: "Allow liking own content?"
+firebase_apikey:
+  default: default_value
+  description: "Firebase API Key"
+firebase_auth_domain:
+  default: default_value
+  description: "Firebase API Auth Domain"
+firebase_projectId:
+  default: default_value
+  description: "Firebase API Project ID"
+firebase_storageBucket:
+  default: default_value
+  description: "Firebase API Storage Bucket"
+firebase_messagingSenderId:
+  default: default_value
+  description: "Firebase API Sender ID"
+firebase_appId:
+  default: default_value
+  description: "Firebase API ID"
+firebase_firestore_database_collection:
+  default: default_value
+  description: "Firebase Firestore Database Collection"

@@ -1,0 +1,152 @@
+@import 'variables';
+
+.quote-button .btn-flat {
+    background-color: var(--primary-300);
+
+    .d-icon {
+        display: none;
+    }
+}
+
+.quote-button {
+    left: 0 !important;
+
+    .d-button-label {
+        font-size: 13px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .extra {
+        background-color: var(--primary-300);
+    }
+}
+
+
+.heartIcon {
+    position: relative;
+    color: $heart-color;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    left: 1.4rem;
+    top: 0;
+
+    &:before {
+        display: block;
+        content: '❤';
+        width: 1em;
+        color: $heart-color;
+        height: 1em;
+        position: absolute;
+        top: 0;
+        font-size: 14px;
+        right: 0;
+        transform: translate(0, 0);
+    }
+
+    &[data-userhearted="true"]:before {
+        filter: drop-shadow(2px 4px 6px red);
+        animation: none;
+    }
+
+    &:after {
+        display: block;
+        content: attr(data-count);
+        width: 1em;
+        color: $count-color;
+        height: 1em;
+        position: absolute;
+        top: 0;
+        font-weight: bold;
+        font-size: 12px;
+        right: 0;
+        transform: translate(0.5rem, 0.3rem);;
+    }
+}
+
+.lightbox-wrapper, p:has(> img:not([src*="emoji"])) {
+    position: relative;
+
+    .heartIcon {
+        position: absolute;
+        color: $heart-color;
+        cursor: pointer;
+        top: -10px;
+        right: 0px;
+
+        &:before {
+            display: block;
+            content: '❤';
+            color: $heart-color;
+            position: absolute;
+            left: 0;
+            font-size: 35px;
+            right: 0;
+            top: 0;
+        }
+
+        &:after {
+            display: block;
+            content: attr(data-count);
+            color: $count-color;
+            position: absolute;
+            font-weight: bold;
+            font-size: 20px;
+            left: 26px;
+            top: 20px;
+            transform: translate(0,0);
+        }
+    }
+}
+
+$icon-width-media: 40px;
+.lightbox-wrapper, .heartIconWrapper, .apollo-video-anchor .video-thumb-wrapper {
+    position: relative;
+
+
+    .heartIcon {
+        position: absolute;
+        color: $heart-color;
+        width: $icon-width-media;
+        height: $icon-width-media;
+        cursor: pointer;
+        right: 10px;
+        top: 0;
+        left: auto;
+        z-index: 1;
+
+        &:before {
+            display: block;
+            content: '❤';
+            width: $icon-width-media;
+            color: $heart-color;
+            height: $icon-width-media;
+            position: absolute;
+            top: 0;
+            font-size: 30px;
+            right: 0;
+            transform: translate(0, 0);
+        }
+
+        &:after {
+            display: block;
+            content: attr(data-count);
+            width: 1em;
+            color: $count-color;
+            height: 1em;
+            position: absolute;
+            top: 0;
+            font-weight: bold;
+            font-size: 15px;
+            right: 0;
+            transform: translate(-.2rem, 1.4rem);
+        }
+    }
+}
+
+
+// Overrides for theme
+.cooked ul, .cooked ol, .d-editor-preview ul, .d-editor-preview ol {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}

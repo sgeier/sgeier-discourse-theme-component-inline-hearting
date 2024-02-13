@@ -1,0 +1,23 @@
+<script defer src="https://unpkg.com/@popperjs/core@2" defer></script>
+<script defer src="https://unpkg.com/tippy.js@6" defer></script>
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script type="text/discourse-plugin" version="1.13.0">
+      window.likeHolder = {};
+      window.likeHolder.stats = {};
+      $(async function () {
+          const firebaseConfig = {
+              apiKey: settings.firebase_apikey,
+              authDomain: settings.firebase_auth_domain,
+              projectId: settings.firebase_projectId,
+              storageBucket: settings.firebase_storageBucket,
+              messagingSenderId: settings.firebase_messagingSenderId,
+              appId: settings.firebase_appId
+          };
+
+          const firebaseApp = firebase.initializeApp(firebaseConfig);
+          window.firebaseDb = firebase.firestore();
+      })
+</script>
